@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\Downloads\linkedlistmain.cpp">
+    <ClCompile Include="linkedlistmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\Downloads\linkedlistfunc.h">
+    <ClInclude Include="linkedlistfunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\..\Downloads\linkedlist.h">
+    <ClInclude Include="linkedlist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

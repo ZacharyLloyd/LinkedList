@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="linkedlistmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="linkedlist.h" />
+    <ClInclude Include="linkedlistfunc.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{6630B509-7518-41C7-9B62-71E7DDD06EAD}</ProjectGuid>
@@ -122,13 +129,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\Downloads\linkedlistmain.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\Downloads\linkedlist.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Downloads\linkedlistfunc.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
