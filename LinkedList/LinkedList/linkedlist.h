@@ -1,40 +1,71 @@
-#ifndef LINKED_LIST_H
-#define LINKED_LIST_H
+#pragma once
+#ifndef DOUBLY_LINKED_LIST_H
+#define DOUBLY_LINKED_LIST_H
 
-/* definition of a node in linked list */
+enum Placement {
+	FRONT,
+	END,
+	BEFORE,
+	AFTER
+};
+
+/*Definition of a node in doubly linked list*/
 template <class T>
 class Node {
 public:
-	T data; // data stored in this Node
-	Node* nextPtr; // pointer to next Node
+	//Data stored in this node
+	//It can be of any type.
+	T data;
+
+	//The pointer to the next node
+	Node* nextPtr;
+
+	//And the pointer to the previous node
 	Node* previousPtr;
-	Node(T newData) {  // Constructor for Node
+
+	//Create Node Constructor
+	Node(T newData) {
 		data = newData;
 		nextPtr = nullptr;
-		previousPtr = nullptr;
-		
 	}
 
 private:
+	//Nothing to be private
 };
 
-/* definition of a forward (single) linked list */
+/*Definition of a doubly linked list*/
 template <class T>
-class LList {
+class DLList {
 public:
-	Node <T> * head;  // beginning of linked list
-	int llSize;  // # of nodes in the list
-	LList() {   // Constructor for LList
-		head = nullptr;
-		llSize = 0;
-	}
-	   
-	Node <T> * findNode(T dataToFind); // returns a pointer to the node whose key matches dataToFind
-	void insertNode(T newData);  // inserts a new node at the start of the list with a key equal to newData
-	void insertNodeEnd(T newData); // inserts a new node at the end of the list
+	//Beginning of linked list
+	Node<T>* head;
 
-	void displayList();  // display all nodes in the list
+	//The number of nodes in our list
+	int dllSize;
+
+
+
+	//Doubly Linked List Constructor
+	DLList() {
+		head = nullptr;
+		dllSize = 0;
+	}
+
+	//Finds the node of a specified type
+	Node<T>* FindNode(T dataToFind);
+
+	//Inserts a node with a specified type
+	//and also with a specified position
+	void InsertNode(T newData, Node<T>* relativeData = nullptr, Placement nodePlacement = Placement::FRONT);
+
+	//Delete: Added after base program works
+	void DeleteNode(Node<T>** relativeData, Node<T>* targetData);
+
+	//Display all node in our list
+	void DisplayList();
+
 private:
+
 };
 
-#endif // LINKED_LIST_H
+#endif // LINK
